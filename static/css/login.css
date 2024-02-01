@@ -1,0 +1,80 @@
+body{
+    background-color: azure;
+}
+.login{
+    width: 30%;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(212, 243, 243);
+    display: block;
+    /* justify-content: center; */
+    text-align: center;
+    padding-top: 20px;
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: black;
+    
+    
+}
+.btn{
+    background-color: red;
+    color: white;
+    width: 300px;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 13px;
+}
+
+h1{
+    color: gold !important;
+    font-family: 'Teko', sans-serif !important;
+    font-size: 40px !important;
+    
+    margin: auto !important;
+    text-align: center;
+    margin-top: 20px !important;
+}
+
+.h{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 15px !important;
+    padding-right: 250px!important;
+    padding-bottom: 20px;
+    color: black !important;
+}
+
+input{
+    margin-top: 5px;
+    width: 300px;
+    border-radius: 2px;
+    border: none;
+
+    height: 30px;
+}
+label{
+    padding-right: 230px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 14px;
+    font-weight: 15px !important;
+    
+
+}
+.bt{
+    text-decoration: none !important;
+    background-color: dimgrey;
+    border: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    color: white !important;
+}
+.msg{
+    width: 30%;
+    height: 20px;
+    margin: auto;
+    margin-top: -20px;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+   <div class="row main allign-items-centre">
+    <div class="col-2"><img class="img-fluid" src="{{item.product.image.url}}" alt=""></div>
+    <div class="col">
+        <div class="row text-muted">{{item.product.name}}</div>
+        <div class="row">{{item.product.category}}</div>
+
+    </div>
+    <div class="col">
+        <a href="#">-</a><a href="#" class="border">{{item.quantity}}</a>
+    </div>
+    <div class="col">${{item.product.price}}</div><div class="col">${{item.price}}</div>
+
+    
+
+   </div>
+
+{% endblock %}

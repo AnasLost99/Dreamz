@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/profileform.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Teko:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+  
+<h1 class="hd">DREAMZ</h1>
+<form class="forms" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    
+    <br>
+    <input class="sbmt" type="submit" name="" id="">
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} 
+
+home
+
+{% endblock %}
+
+
+{% block content %}
+<div style="width: 100%; height: 70px;" class="free"></div>
+<nav class="cat">
+  
+  {% for i in category %}
+  
+  <a href="/category/{{i.id}}" style="color: black; margin-left: 195px; text-decoration: none;"  >{{i.name}}</a>
+  {% endfor %}
+  
+  </nav>
+
+    <img src="{{product.image.url}}" alt="" width="400px" height="500px" style="margin-left: 200px; margin-top: 90px;" >
+    <div class="bt">
+      <button style="border: none; width: 150px; height: 50px; margin-left: 150px; border-radius: 10px; background-color: red; " ><a style="text-decoration: none; color: white;" href="#"><i class="fa-solid fa-cart-shopping"></i> add to cart</a></button>
+      <button style="border: none; width: 150px; height: 50px; border-radius: 10px;  background-color:orange; "><a style="text-decoration: none; color: white;" href="#"><i class="fa-solid fa-bolt"></i> buy now</a></button>
+    </div>
+    <div class="view">
+      <h2>{{product.name}}</h2>
+      <button type="button" class="btn btn-success rate">{{product.ratings}}<i class="fa-solid fa-star star"></i></button> rating
+      <hr width="645px">
+      <button style="background-color: gold; border: none; border-radius: 5px; color: white !important;">Dreamz special</button><br><br>
+       
+      <button style="color: white; background-color: mediumturquoise ;" class="btn btns ">{{product.offer}}</button> off<br><br>
+      
+        
+      
+      <p style="font-weight: 600;">{{product.price}}</p>
+      <div style="display: flex; color: grey;">
+         <h6>mrp:</h6>
+         <h6 style="text-decoration: line-through;">{{product.originalprice}}</h6>
+      </div>
+      <p style="font-weight: 600;">inclusive off all taxes</p>
+
+      <hr width="645px">
+
+      <h3>Product details</h3><br>
+      <p style="font-weight: 600; ">{{product.details}}</p>
+
+
+    </div>
+
+    <div class="buycontainer">
+
+      <h3>{{product.name}}</h3>
+
+      <p style="font-weight: 600; font-size: larger;">{{product.price}}</p><br>
+
+      <p>FREE delivery Sunday, 21 January</p>
+
+      <p>Or fastest delivery Wednesday, 17 January.Buy now!</p>
+
+      <p><i class="fa-solid fa-location-dot"></i> Delivering to *******,PIN:######</p>
+
+      <h5>In Stock</h5>
+
+      <p>Ships from <span style="color: gold;">Dreamz</span></p>
+
+      <button class="cart" style=" padding-left: 20px;  background-color: red; width: 200px;  border-radius: 10px; height: 30px; border: none;"><a style="color: white; text-decoration: none;" href="#">Add to Cart</a></button><br><br>
+      
+      <button style="padding-left: 20px;   background-color: orange; width: 200px;  border-radius: 10px; height: 30px; border: none;"><a style="color: white; text-decoration: none;" href="#">Buy Now</a></button><br><br>
+
+      
+    </div>
+    
+ 
+    
+    <!-- <a href="/userdetails/{{product.user.id}}"><h5>{{product.user}}</h5></a> -->
+
+    <form method="post" style="width: 20px; margin-top: -500px; margin-left: 200px; ">
+    
+      {% csrf_token %}
+      {{form}}
+    
+      <input type="submit" value="submit">
+    </form><br><br>
+
+
+
+
+    {% for i in review %}
+    <h6 style="margin-left: 200px;">reviews</h6>
+    <div class="card" style="width: 18rem;  margin-top: 100px; margin-left: 200px;">
+        <!-- <img class="card-img-top" src="{{i.user.profile.image.url}}" alt="Card image cap"> -->
+        
+        <div class="card-body">
+          
+          <h5 class="card-title">{{i.user}}</h5>
+          <hr>
+          <p class="card-text">{{i.review}}</p>
+        </div>
+        
+        <!-- <div class="card-body">
+          <p>{{i.Reviews}}</p>
+        </div> -->
+      </div>
+
+    {% endfor %}
+    
+    
+    
+
+    <link rel="stylesheet" href="{% static 'css/viewpage.css' %}">
+<div class="infos" style="margin-top: 400px;">
+    <div class="info">
+      <div class="info1">
+      <h4>Online shopping</h4>
+  
+      <nav class="cats">
+  
+      {% for i in category %}
+
+      <a  href="/category/{{i.id}}" style="color: black; margin-left: 60px; text-decoration: none;  justify-content: center;"  >{{i.name}}</a>
+      {% endfor %}
+
+    </nav>
+    </div>
+
+
+    <div class="info2">
+      <h4>Connect With Us</h4>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-twitter"></i> Twitter</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-telegram"></i> Telegram</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
+    </div>
+
+    <div class="info3">
+      <h4>Customer Policies</h4>
+
+      <a style="text-decoration: none; color: black;" href="#">FAQ</a><br>
+      <a style="text-decoration: none; color: black;" href="#">T&C</a><br>
+      <a style="text-decoration: none; color: black;" href="#">Terms of Use</a><br>
+      <a style="text-decoration: none; color: black;" href="#">Contact Us</a><br>
+      <a style="text-decoration: none; color: black;" href="#">location</a>
+
+    </div>
+
+    
+    
+  </div>
+  
+
+  <div class="last">
+    
+      <h1 class="dre">DREAMZ</h1>
+      <p class="lt">Australia 
+        Brazil
+        Canada
+        China
+        France
+        Germany
+        Italy
+        Japan
+        Mexico
+        Netherlands
+        Poland
+        Singapore
+        Spain
+        Turkey
+        United Arab Emirates
+        United Kingdom
+        United States  </p>
+  </div>
+
+  <div class="last2" >
+    <p>Conditions of Use & Sale</p>
+    <p>Privacy Notice</p>
+    <p>Interest-Based Ads</p>
+    <p>© 2023-2024, Dreamz.com, Inc. or its affiliates</p>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'image/fashion.jpg' %}">
+{% endblock %}

@@ -1,0 +1,97 @@
+body{
+
+    background-color: azure;
+}
+.pro{
+    width: 500px;
+    height: 380px;
+    margin-top: 20px;
+    background-color: rgb(212, 243, 243);
+    padding-top: 10px;
+    
+}
+
+.pro1{
+    
+    background-color: rgb(212, 243, 243);
+    width: 200px;
+    margin: auto;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Teko', sans-serif;
+}
+
+.pros{
+    width: 500px;
+    height: 280px;
+    margin: auto;
+    display: flex;
+    background-color: rgb(212, 243, 243);
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+}
+
+.pros1{
+    background-color: rgb(243, 240, 240);
+    border: none;
+    width: 200px;
+    height: 100px;
+    font-size: larger;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+    
+    
+  
+}
+
+.pros2{
+    background-color: rgb(243, 240, 240);
+    border: none;
+    width: 200px;
+    height: 100px;
+    font-size: larger;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+    
+}
+
+.pros3{
+    background-color: rgb(243, 240, 240);
+    border: none;
+    width: 200px;
+    height: 100px;
+    font-size: larger;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+    
+}
+
+
+.log{
+    width: 500px;
+    height: 40px;
+    margin: auto;
+    background-color: rgb(212, 243, 243);
+}
+
+.btt{
+
+    background-color: blue;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* .msg{
+    margin-top: -20px;
+} */
+
+
+

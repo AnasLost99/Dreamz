@@ -1,0 +1,53 @@
+.dre{
+   color: gold !important;
+   font-family: 'Teko', sans-serif;
+   font-size: 30px !important;
+   margin-left: 25px;
+   
+}
+
+
+
+.a{
+    
+    margin-left: 40px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px !important;
+    /* font-weight: 400 !important; */
+}
+.c{
+    margin-left: 40px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px !important;
+}
+
+
+.d{
+    margin-left: 60px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px !important;
+}
+.e{
+    margin-left: 40px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px !important;
+}
+.f{
+    margin-left: 40px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px !important;
+}
+
+.dr{
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 3;
+}
+
+.form-inlines{
+    width: 600px;
+    height: 40px;
+    margin-left: 70px;
+    display: flex;
+    
+}

@@ -1,0 +1,177 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="free"></div>
+
+<nav class="cat">
+  
+{% for i in category %}
+
+<a href="/category/{{i.id}}" style="color: black; margin-left: 195px; text-decoration: none !important; justify-content: space-evenly !important;"  >{{i.name}}</a>
+{% endfor %}
+
+</nav>
+
+
+<!-- <img width="100%" style="margin-top: 80px;" src="static/image/fashion7.jpg" alt="" class="img1"> -->
+
+<img width="100%" style="margin-top: 60px;" src="static/image/fashion.jpg" alt="" class="img2"> 
+  
+
+ 
+
+
+
+<!-- <video width="1000px" height="240" controls>
+    <source src="static/video/1091469455-preview.mp4" type="video/mp4">
+    
+  </video> -->
+
+  <div class="main" style="justify-content: space-evenly;">
+    {% for i in product %}
+    
+    <div class="card bg-light mb-3" style="max-width: 18rem ; ">
+      <a class="b" href="/viewpage/{{i.id}}">
+        <img src="{{i.image.url}}" style=" width: 230px; height: 250px;  ">
+        <div class="card-header " style="font-size: larger;"  >{{i.name}}</div>
+        <div class="card-body">
+          <button type="button" class="btn btn-success rate">{{i.ratings}}<i class="fa-solid fa-star star"></i></button>
+          <div class="off">
+            
+            <h6 class="offs">{{i.offer}}</h6>
+            <h6 style="color: green; padding-right: 30px;">off</h6>
+            <h5 class="card-title">{{i.price}}</h5>
+          </div>
+          <div class="tag">
+            <h6>mrp:</h6>
+            <h6 class="prc">{{i.originalprice}}</h6>
+
+          </div>
+          <!-- <button  value="{{i.id}}" value="{{i.id}}" class="btn btn-primary" style="margin-top: 10px;" >add to cart</button> -->
+        
+          
+        </div>
+      </a>  
+    </div>
+  
+    {% endfor %}
+  </div>
+    
+     
+    <nav class="pagination" aria-label="...">
+      <ul class="pagination">
+        
+        
+        
+        {% if product.has_previous %}
+        
+        
+        <li class="page-item  ">
+          <a class="page-link" href="?page={{product.previous_page_number}}" tabindex="-1">Previous</a>
+        </li>
+    
+        <li class="page-item"><a class="page-link" href="?page={{product.previous_page_number}}">{{product.previous_page_number}}</a></li>
+        
+        {% endif %}
+        <li class="page-item active">
+          <a class="page-link" href="#">{{product.number}} <span class="sr-only">(current)</span></a>
+        </li>
+        {% if product.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{product.next_page_number}}">{{product.next_page_number}}</a></li>
+    
+        <li class="page-item ">
+          <a class="page-link" href="?page={{product.next_page_number}}">Next</a>
+        </li>
+    
+        {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="?page={{product.previous_page_number}}" tabindex="-1">Next</a>
+        </li>
+        {% endif %}
+       
+      </ul>
+    </nav>
+
+  
+
+  
+ 
+
+  <div class="info">
+    <div class="info1" style="text-align: center;">
+    <h4>Online shopping</h4>
+
+    <nav class="cats">
+
+    {% for i in category %}
+
+    <a  href="/category/{{i.id}}" style="color: black; margin-left: 60px; text-decoration: none; text-align: center; "  >{{i.name}}</a>
+    {% endfor %}
+
+    </nav>
+    </div>
+    <div class="info2">
+      <h4>Connect With Us</h4>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-twitter"></i> Twitter</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-telegram"></i> Telegram</a><br>
+      <a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
+    </div>
+
+    <div class="info3">
+      <h4>Customer Policies</h4>
+
+      <a style="text-decoration: none; color: black;" href="#">FAQ</a><br>
+      <a style="text-decoration: none; color: black;" href="#">T&C</a><br>
+      <a style="text-decoration: none; color: black;" href="#">Terms of Use</a><br>
+      <a style="text-decoration: none; color: black;" href="#">Contact Us</a><br>
+      <a style="text-decoration: none; color: black;" href="#">location</a>
+
+    </div>
+
+    
+    
+  </div>
+  
+
+  <div class="last">
+    
+      <h1 class="dre">DREAMZ</h1>
+      <p class="lt">Australia 
+        Brazil
+        Canada
+        China
+        France
+        Germany
+        Italy
+        Japan
+        Mexico
+        Netherlands
+        Poland
+        Singapore
+        Spain
+        Turkey
+        United Arab Emirates
+        United Kingdom
+        United States  </p>
+  </div>
+
+  <div class="last2">
+    <p>Conditions of Use & Sale</p>
+    <p>Privacy Notice</p>
+    <p>Interest-Based Ads</p>
+    <p>© 2023-2024, Dreamz.com, Inc. or its affiliates</p>
+  </div>
+
+ <script src="{% static 'js/cart.js'%}"></script>
+
+  
+{% endblock %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
